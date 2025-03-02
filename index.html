@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-DO-List</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./styles/style.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js" defer></script>
+    <script src="./scripts/script.js" defer></script>
+</head>
+<body>
+    <div class="container">
+        <div class="todo-title">
+            <h1>
+                To Do List
+            </h1>
+        </div>
+
+        <div class="input-section">
+            <label for="todo" p></label> 
+            <input type="text" id="todo" placeholder="Add a new task....">
+            <button id="add-btn">
+                <i class='bx bx-list-plus'>Add</i>
+            </button>
+        </div>
+
+        <div class="sort-section">
+            <button id="sort-btn">
+                <i class='bx bx-sort' >Sort by Latest</i>
+            </button>
+        </div>
+
+        <div class="todo-section">
+            <div class="section-header active">
+                <div class="section-header-title">
+                    <h2>Uncompleted tasks</h2>
+                    <span class="number-counter" id="uncompleted-count">
+                        0
+                    </span>
+                </div>
+                <span class="down-arrow"><i class='bx bxs-chevron-down-circle'></i></span>
+            </div>
+           
+            <div class="section-contents extends" id="uncompleted-section">
+                <ul id="uncompleted-list">
+                    <li class="todo-item">
+                        <input type="checkbox" class="checkbox">
+                        <span class="todo-text">Play Games</span>
+                        <button class="delete-btn"><i class='bx bx-trash'></i>
+                        </button>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="todo-section">
+            <div class="section-header active">
+                <div class="section-header-title">
+                    <h2>completed tasks</h2>
+               
+                    <span class="number-counter" id="completed-count">
+                        0
+                    </span>
+                </div>
+                <span class="down-arrow"><i class='bx bxs-chevron-down-circle'></i></span>
+            </div>
+           
+
+            <div class="section-contents" id="completed-section">
+                <ul id="completedList">
+
+                </ul>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
